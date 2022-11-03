@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css' rel='stylesheet'
+        integrity='sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi' crossorigin='anonymous'>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body class="container-fluid justify-content-center bg-warning">
+    <section class="mt-5 row d-flex">
+        <!-- SECTION CART AND CHECK OUT -->
+        <div class="col-5 bg-light checkout">
+            <div class="text-primary text-nowrap">
+                <!-- SECTION TOP OF CART -->
+                <div class="titles">NAME QTY EACH TOTAL</div>
+            </div>
+            <!-- FIXME BG COLORS -->
+
+            <div id="toppingsCart" class="text-center">
+            </div>
+            <div id="iceCreamCart" class="text-center">
+                <!-- <P>ITEM</P>
+                <P>QTY</P>
+                <P>PRICE</P>
+                <P>TOTAL</P> -->
+            </div>
+            <div id="conesCart" class="text-center">
+            </div>
+            <div class="d-flex justify-content-end">
+                <p>TOTAL:</p>
+                <p class="color-primary">$<span id="total"></span></p>
+                <!-- FIXME FORMAT BUTTON -->
+                <button class="btn-primary">PAY</button>
+            </div>
+        </div>
+        <!-- SECTION STORE FRONT -->
+        <div class="col-7">
+
+            <section class="row">
+                <div class="col-12">
+                    <h2> TOPPINGS </h2>
+                </div>
+                <div id="topp" class="d-flex justify-content-center">
+                    <!-- <div class="col-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/Sprinkles2.jpg"
+                            class=" img-fluid">
+                        <p><span>Sprinkles</span> $<span></span></p>
+                    </div> -->
+                </div>
+            </section>
+            <section class="row">
+                <div class="col-12">
+                    <h2> ICE CREAM </h2>
+                </div>
+                <div id="creamm" class="d-flex justify-content-center">
+
+
+                </div>
+            </section>
+            <section class="row">
+                <div class="col-12">
+                    <h2> CONES </h2>
+                    <div id="conee" class="d-flex justify-content-center">
+                    </div>
+            </section>
+    </section>
+    </section>
+    <script src="app.js">
+    </script>
+</body>
+
+</html>
