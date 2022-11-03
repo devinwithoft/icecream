@@ -11,8 +11,25 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+<style>
+    body.debug .container,
+    body.debug .container-fluid {
+        outline: 2px double blue;
+        outline-offset: -2px;
+    }
 
-<body class="container-fluid justify-content-center bg-warning">
+    body.debug .row {
+        outline: 2px dashed red;
+        outline-offset: -2px;
+    }
+
+    body.debug [class*="col-"] {
+        outline: 2px dotted forestgreen;
+        outline-offset: -3px;
+    }
+</style>
+
+<body class="container-fluid justify-content-center bg-warning debug">
     <section class="mt-5 row d-flex">
         <!-- SECTION CART AND CHECK OUT -->
         <div class="col-5 bg-light checkout">
@@ -32,12 +49,19 @@
             </div>
             <div id="conesCart" class="text-center">
             </div>
-            <div class="d-flex justify-content-end">
-                <p>TOTAL:</p>
-                <p class="color-primary">$<span id="total"></span></p>
-                <!-- FIXME FORMAT BUTTON -->
-                <button class="btn-primary">PAY</button>
-            </div>
+            <section class="row">
+
+                <div class="d-flex justify-content-between">
+                    <div class="col-5 flex-nowrap">
+                        <P>TOTAL: $
+                            <span id="total"></span>
+                        </p>
+                    </div>
+                    <div></div>
+                    <!-- FIXME FORMAT BUTTON -->
+                    <button class="btn-primary">PAY</button>
+                </div>
+            </section>
         </div>
         <!-- SECTION STORE FRONT -->
         <div class="col-7">

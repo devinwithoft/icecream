@@ -114,7 +114,7 @@ function drawToppings() {
     let template = ''
     toppings.forEach(t => {
         if (t.quantity > 0) {
-            template += `<div class="bg-secondary d-flex justify-content-evenly"> <i class="mdi mdi-close text-danger cursor-pointer" onclick="removeItem('${t.name}')"></i> <P>${t.name}</P> 
+            template += `<div class="bg-secondary d-flex justify-content-evenly"> <i class="mdi mdi-close text-danger cursor-pointer" onclick="removeToppings('${t.name}')"></i> <P>${t.name}</P> 
             <P>${t.quantity}</P>
              <P>$${t.price}</P> 
              <P>$${t.price * t.quantity}</P> </div>`
@@ -142,7 +142,7 @@ function drawCones() {
     let template = ''
     cones.forEach(c => {
         if (c.quantity > 0) {
-            template += `<div class="bg-secondary d-flex justify-content-evenly"> <i class="mdi mdi-close text-danger cursor-pointer" onclick="removeItem('${c.name}')"></i><p> ${c.name}</p>
+            template += `<div class="bg-secondary d-flex justify-content-evenly"> <i class="mdi mdi-close text-danger cursor-pointer" onclick="removeCones('${c.name}')"></i><p> ${c.name}</p>
             <P>${c.quantity}</P>
             <P>$${c.price}</P> 
             <P>$${c.price * c.quantity}</P> </div>`
@@ -178,9 +178,16 @@ function removeiceCream(icecreamname) {
 
 function removeToppings(toppingsName) {
     let foundTopping = toppings.find(t => t.name == toppingsName)
-    console.log(foundCream)
+    foundTopping.quantity--
+    drawToppings()
+
 }
 
+function removeCones(conename) {
+    let foundCone = cones.find(c => c.name == conename)
+    foundCone.quantity--
+    drawCones()
+}
 
 renderStoreTop()
 renderStoreCone()
