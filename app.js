@@ -56,9 +56,9 @@ function renderStoreTop() {
     let allToppings = document.getElementById('topp')
     let template = ''
     toppings.forEach(t => {
-        template += `<div class="col-4 cute-card" onclick="buyTopping('${t.name}')">
+        template += `<div class="col-4 cute-card justify-content-center text-center" onclick="buyTopping('${t.name}')">
     <img src="${t.image}" class="img-fluid fit-img">
-    <p>${t.name} $${t.price}</p>
+    <p class ="text-start fs-4" >${t.name} $${t.price}</p>
 </div>
 `})
     allToppings.innerHTML = template
@@ -68,9 +68,9 @@ function renderStoreCone() {
     let allCones = document.getElementById('conee')
     let template = ''
     cones.forEach(v => {
-        template += `<div class="col-4 cute-card" onclick="buyCone('${v.name}')">
+        template += `<div class="col-4 cute-card text-center" onclick="buyCone('${v.name}')">
     <img src="${v.image}" class="img-fluid fit-img">
-    <p>${v.name} $${v.price}</p>
+    <p class="text-start fs-4">${v.name} $${v.price}</p>
 </div>
 `})
     allCones.innerHTML = template
@@ -81,9 +81,9 @@ function renderStoreCream() {
     let allCream = document.getElementById('creamm')
     let template = ''
     iceCream.forEach(i => {
-        template += `<div class="col-4 cute-card" onclick="buyCream('${i.name}')">
+        template += `<div class="col-4 cute-card text-center" onclick="buyCream('${i.name}')">
     <img src="${i.image}" class="img-fluid fit-img">
-    <p>${i.name} $${i.price}</p>
+    <p class="text-start fs-4">${i.name} $${i.price}</p>
 </div>
 `})
     allCream.innerHTML = template
