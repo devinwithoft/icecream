@@ -114,7 +114,7 @@ function drawToppings() {
     let template = ''
     toppings.forEach(t => {
         if (t.quantity > 0) {
-            template += `<div class="bg-secondary d-flex justify-content-evenly"> <i class="mdi mdi-close text-danger cursor-pointer" onclick="removeToppings('${t.name}')"></i> <P>${t.name}</P> 
+            template += `<div class="bg-secondary d-flex justify-content-between px-2"> <i class="mdi mdi-close text-danger cursor-pointer" onclick="removeToppings('${t.name}')"></i> <P>${t.name}</P> 
             <P>${t.quantity}</P>
              <P>$${t.price}</P> 
              <P>$${t.price * t.quantity}</P> </div>`
@@ -128,7 +128,7 @@ function drawIceCream() {
     let template = ''
     iceCream.forEach(i => {
         if (i.quantity > 0) {
-            template += `<div class="bg-secondary d-flex justify-content-evenly"> <i class="mdi mdi-close text-danger cursor-pointer" onclick="removeiceCream('${i.name}')"></i><p> ${i.name}</p>
+            template += `<div class="bg-secondary d-flex justify-content-between px-2"> <i class="mdi mdi-close text-danger cursor-pointer" onclick="removeiceCream('${i.name}')"></i><p> ${i.name}</p>
             <P>${i.quantity}</P>
             <P>$${i.price}</P>  
             <P>$${i.price * i.quantity}</P> </div>`
@@ -142,7 +142,7 @@ function drawCones() {
     let template = ''
     cones.forEach(c => {
         if (c.quantity > 0) {
-            template += `<div class="bg-secondary d-flex justify-content-evenly"> <i class="mdi mdi-close text-danger cursor-pointer" onclick="removeCones('${c.name}')"></i><p> ${c.name}</p>
+            template += `<div class="bg-secondary d-flex justify-content-between px-2"> <i class="mdi mdi-close text-danger cursor-pointer" onclick="removeCones('${c.name}')"></i><p> ${c.name}</p>
             <P>${c.quantity}</P>
             <P>$${c.price}</P> 
             <P>$${c.price * c.quantity}</P> </div>`
